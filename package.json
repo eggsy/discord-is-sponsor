@@ -1,0 +1,45 @@
+{
+  "name": "discord-is-sponsor",
+  "version": "1.0.0",
+  "description": "🙌 Check if a Discord user is sponsoring you on GitHub and give them a role!",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development ts-node-dev ./src/index",
+    "build": "cross-env NODE_ENV=production tsup ./src/**"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "typescript",
+    "fastify",
+    "github",
+    "sponsors"
+  ],
+  "author": {
+    "name": "Abdulbaki 'EGGSY' Dursun",
+    "email": "eggsydev@gmail.com",
+    "url": "https://eggsy.xyz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eggsy/discord-is-sponsor"
+  },
+  "readme": "https://github.com/eggsy/discord-is-sponsor#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "axios": "^0.25.0",
+    "consola": "^2.15.3",
+    "discord.js": "^13.6.0",
+    "fastify": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.14",
+    "cross-env": "^7.0.3",
+    "dotenv": "^15.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node-dev": "^1.1.8",
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5"
+  }
+}
