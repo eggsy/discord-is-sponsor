@@ -58,9 +58,7 @@ export class ClientController {
     }
 
     if (roles.length > 0) await user.roles.add(roles);
-    await user.send(
-      `✨ There you go \`${githubHandle}\`, you're a sponsor!`
-    );
+    await user.send(`✨ There you go \`${githubHandle}\`, you're a sponsor!`);
   }
 
   async handleInteraction(interaction: CommandInteraction) {
@@ -70,14 +68,11 @@ export class ClientController {
     )
       return;
 
-    const user = interaction.user;
-
-    const message = await user.send(`
-    > Note that this bot will look for your __GitHub connection from your Discord profile__. If you haven't done so, please go to **User Settings > Connections** and connect your GitHub account to your Discord account!\n\n:link: Please login from here: https://discord.com/oauth2/authorize?client_id=${config.clientId}&response_type=code&redirect_uri=${config.callbackUrl}&scope=identify+connections
-    `);
+    const message = `> Note that this bot will look for your __GitHub connection from your Discord profile__. If you haven't done so, please go to **User Settings > Connections** and connect your GitHub account to your Discord account!\n\n:link: Please login from here: https://discord.com/oauth2/authorize?client_id=${config.clientId}&response_type=code&redirect_uri=${config.callbackUrl}&scope=identify+connections
+    `;
 
     interaction.reply({
-      content: `[Please check your DMs!](${message.url})`,
+      content: message,
       ephemeral: true,
     });
   }
