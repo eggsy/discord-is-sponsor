@@ -1,6 +1,6 @@
 # Discord: Is User Sponsor?
 
-A bot that if the user is sponsoring you or someone else on GitHub! Uses Discord OAuth and Discord GitHub integration to get user's GitHub name and then checks through GitHub GQL API.
+A bot that gives roles if a user is supporting you on GitHub! Uses Discord OAuth and Discord GitHub integration to get user's handle and then checks through GitHub GQL API.
 
 ## Demo
 
