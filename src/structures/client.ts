@@ -49,7 +49,6 @@ export class ClientController {
   async setUserRole(userId: string, githubHandle: string) {
     const guild = await this.client.guilds.fetch(config.guildId);
     const user = await guild.members.fetch(userId);
-    const dmChannel = await user.createDM();
 
     const roles = [];
 
@@ -59,7 +58,7 @@ export class ClientController {
     }
 
     if (roles.length > 0) await user.roles.add(roles);
-    await dmChannel.send(
+    await user.send(
       `✨ There you go \`${githubHandle}\`, you're a sponsor!`
     );
   }
@@ -73,8 +72,7 @@ export class ClientController {
 
     const user = interaction.user;
 
-    const dmChannel = await user.createDM();
-    const message = await dmChannel.send(`
+    const message = await user.send(`
     > Note that this bot will look for your __GitHub connection from your Discord profile__. If you haven't done so, please go to **User Settings > Connections** and connect your GitHub account to your Discord account!\n\n:link: Please login from here: https://discord.com/oauth2/authorize?client_id=${config.clientId}&response_type=code&redirect_uri=${config.callbackUrl}&scope=identify+connections
     `);
 
