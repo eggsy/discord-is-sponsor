@@ -38,3 +38,11 @@ It was created for [@antfu](https://github.com/antfu)'s Discord server.
 ## Any Problems?
 
 Create an issue and let me know!
+
+### Sponsors
+
+<p align="center">
+  <a href="https://github.com/sponsors/eggsy">
+    <img src='https://cdn.jsdelivr.net/gh/eggsy/.github/sponsors.svg'/>
+  </a>
+</p>
